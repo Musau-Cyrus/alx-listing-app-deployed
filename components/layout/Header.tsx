@@ -1,7 +1,7 @@
 const Header: React.FC = () => {
   return (
     <header className="min-h-[55px] w-full mb-4">
-      <div className="flex justify-center items-center gap-4 bg-[#34967C] min-h-[50px] mb-2 px-4 md:px-8 py-4">
+      <div className="flex justify-center items-center gap-4 bg-[#34967C] min-h-[50px] mb-2 px-2 py-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* LARGER SCREEN */}
-      <nav className="hidden md:flex justify-between items-center gap-6 h-[70px] px-4 md:px-8 border-b border-b-[#e9e9e9] pb-2">
+      <nav className="hidden md:flex justify-between items-center gap-6 h-[70px] mx-4 md:mx-[60px] border-b border-b-[#e9e9e9] pb-2">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +192,7 @@ const Header: React.FC = () => {
       </nav>
 
       {/* NAV LOGOS */}
-      <div className="flex gap-8 justify-around py-4 px-4 md:px-8 overflow-x-auto ">
+      <div className="flex gap-8 justify-around py-4 md:mx-[60px] overflow-x-auto ">
         <div className="flex flex-col items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

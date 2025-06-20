@@ -4,16 +4,16 @@ const FooterLinks: React.FC<FooterLinksProps> = ({ title, links }) => {
   return (
     <div className=" flex flex-col gap-6 list-none">
       <h2 className="text-sm lg:text-2xl font-semibold">{title}</h2>
-      <div className="flex flex-col shrink-0 space-y-2 text-xs lg:text-sm">
-        <li>
+      <div className="flex flex-col shrink-0 space-y-2.5 text-xs lg:text-sm">
+        <li className="cursor-pointer">
           <a href="#"></a>
           {links.first}
         </li>
-        <li>
+        <li className="cursor-pointer">
           <a href="#"></a>
           {links.second}
         </li>
-        <li>
+        <li className="cursor-pointer">
           <a href="#"></a>
           {links.third}
         </li>
@@ -24,8 +24,8 @@ const FooterLinks: React.FC<FooterLinksProps> = ({ title, links }) => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#222222] text-[#CACACA] md:px-8">
-      <div className="flex flex-col justify-between gap-8 px-4 pt-8 pb-24 min-h-[20rem] lg:flex-row">
+    <footer className="bg-[#222222] text-[#CACACA] md:px-[60px]">
+      <div className="flex flex-col justify-between gap-8 pt-8 pb-24 min-h-[20rem] lg:flex-row">
         <div className="flex flex-col gap-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -97,15 +97,18 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <hr className="w-[95%] mx-auto" />
-      <div className="flex flex-col justify-center items-center gap-8 py-8 text-xs lg:text-sm px-8">
-        <p className="text-center">
-          Some hotel requires you to cancel more than 24 hours before check-in.
-          Details{" "}
-          <a href="#" className="text-[#34967C]">
-            here
-          </a>
-        </p>
+      <hr className="opacity-20" />
+      <div className="flex justify-between py-6 text-xs lg:text-sm">
+        <div>
+          <p>
+            Some hotel requires you to cancel more than 24 hours before
+            check-in. Details{" "}
+            <a href="#" className="text-[#34967C]">
+              here
+            </a>
+          </p>
+        </div>
+
         <div className="flex gap-6">
           <a href="#">Terms of Service</a>
           <a href="#">Policy service</a>
