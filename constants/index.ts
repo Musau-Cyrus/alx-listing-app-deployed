@@ -230,7 +230,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       shower: "4",
       occupants: "6-8"
     },
-    image: "/assets/image 25.png",
+    image: "/assets/image 22.png",
     discount: "50"
   },
   {
@@ -248,7 +248,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       shower: "3",
       occupants: "4-6"
     },
-    image: "/assets/image 25-1.png",
+    image: "/assets/image 19.png",
     discount: ""
   },
   {
@@ -266,7 +266,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       shower: "2",
       occupants: "2-4"
     },
-    image: "/assets/image 25-2.png",
+    image: "/assets/VillaI.png",
     discount: "35"
   },
   {
@@ -284,7 +284,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       shower: "1",
       occupants: "2"
     },
-    image: "/assets/image4.png",
+    image: "/assets/DesignerVilla.png",
     discount: "20"
   },
   {
@@ -302,7 +302,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       shower: "4",
       occupants: "6-8"
     },
-    image: "/assets/image 25-3.png",
+    image: "/assets/CasaDeCalorina.png",
     discount: "20"
   },
   {
