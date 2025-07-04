@@ -47,3 +47,9 @@ export interface FooterLinksProps {
     fifth?: string;
   }
 }
+
+export interface PillProps {
+  label: string;
+  isActive?: boolean;
+  onClick: () => void
+}
