@@ -1,7 +1,20 @@
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+
 const Header: React.FC = () => {
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      router.push(`/search?search=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
   return (
     <header className="min-h-[55px] w-full mb-4">
-      <div className="flex justify-center items-center gap-4 bg-[#34967C] min-h-[50px] mb-2 px-2 py-3">
+      <div className="flex justify-center items-center gap-4 bg-[#34967C] min-h-[50px] mb-2 px-4 md:px-8 py-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -61,8 +74,8 @@ const Header: React.FC = () => {
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="42"
-              height="42"
+              width="39"
+              height="39"
               viewBox="0 0 42 42"
               fill="none"
             >
@@ -85,7 +98,7 @@ const Header: React.FC = () => {
         </nav>
         <div>
           <img
-            src="/assets/icons/profile.png"
+            src="/assets/images/profile.png"
             alt="User Profile Icon"
             className="size-[46px]"
           />
@@ -93,7 +106,7 @@ const Header: React.FC = () => {
       </div>
 
       {/* LARGER SCREEN */}
-      <nav className="hidden md:flex justify-between items-center gap-6 h-[70px] mx-4 md:mx-[60px] border-b border-b-[#e9e9e9] pb-2">
+      <nav className="hidden md:flex justify-between items-center gap-6 h-[67px] px-4 md:px-8 border-b border-b-[#e9e9e9] pb-2">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -125,10 +138,18 @@ const Header: React.FC = () => {
           </svg>
         </div>
 
-        <div className="flex items-center justify-between gap-2 h-[58px] w-full max-w-3xl text-sm text-center border border-gray-200 rounded-full pl-4 pr-1">
-          <div className="flex flex-col flex-2 shrink-2 text-left border-r border-gray-200 pr-4">
-            <p className=" font-medium">Location</p>
-            <p className="text-gray-400 text-xs">Search for destination</p>
+        <form onSubmit={handleSearch} className="flex items-center justify-between gap-2 h-[55px] w-full max-w-3xl text-sm text-center border border-gray-200 rounded-full pl-4 pr-1">
+          <div className={`flex flex-col flex-2 shrink-2 text-left border-r border-gray-200 pr-4 ${isSearchFocused ? 'border-[#34967C]' : ''}`}>
+            <input
+              type="text"
+              placeholder="Search for destination"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setIsSearchFocused(true)}
+              onBlur={() => setIsSearchFocused(false)}
+              className="font-medium outline-none bg-transparent w-full"
+            />
+            <p className="text-gray-400 text-xs">Location</p>
           </div>
           <div className="flex flex-col border-r border-gray-200 px-4">
             <p className="font-medium">Check in</p>
@@ -170,7 +191,7 @@ const Header: React.FC = () => {
               </svg>
             </button>
           </div>
-        </div>
+        </form>
         {/* NAV BUTTONS */}
         <div className="hidden lg:flex gap-4 shrink-0">
           <button className="bg-[#34967C] text-white rounded-full px-6 py-2 text-sm cursor-pointer hover:bg-opacity-80 transition-colors">
@@ -184,7 +205,7 @@ const Header: React.FC = () => {
         {/* USER PROFILE ICON MEDIUM SCREENS */}
         <div className="hidden md:block lg:hidden shrink-0">
           <img
-            src="/assets/icons/profile.png"
+            src="/assets/images/profile.png"
             alt="User Profile Icon"
             className="size-[46px]"
           />
@@ -192,7 +213,7 @@ const Header: React.FC = () => {
       </nav>
 
       {/* NAV LOGOS */}
-      <div className="flex gap-8 justify-around py-4 md:mx-[60px] overflow-x-auto ">
+      <div className="flex gap-8 justify-around py-4 px-4 md:px-8 overflow-x-auto ">
         <div className="flex flex-col items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

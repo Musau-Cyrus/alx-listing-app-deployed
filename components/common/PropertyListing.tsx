@@ -11,9 +11,9 @@ const PropertyCard: React.FC<{ property: PropertyProps }> = ({ property }) => {
           className="w-full h-48 object-cover"
         />
         {property.discount && (
-          <div className="absolute top-4 left-2 bg-red-500 text-white px-2 py-1 rounded text-sm">
-            {property.discount}% OFF
-          </div>
+          <span className="absolute top-0 left-0 bg-emerald-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+            {property.discount}% Off
+          </span>
         )}
       </div>
 

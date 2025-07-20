@@ -20,6 +20,7 @@ export interface ButtonProps {
 
 export interface PropertyProps {
   name: string;
+  description: string;
   address: {
     state: string;
     city: string;
@@ -46,6 +47,13 @@ export interface FooterLinksProps {
     fourth?: string;
     fifth?: string;
   }
+}
+
+export interface ReviewProps {
+  name: string;
+  avatar: string;
+  rating: number;
+  comment: string;
 }
 
 export interface PillProps {

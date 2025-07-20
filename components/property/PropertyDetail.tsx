@@ -1,36 +1,29 @@
-import { PropertyProps } from "@/interfaces/index";
+import React from 'react';
 
-const PropertyDetail: React.FC<{ property: PropertyProps }> = ({ property }) => {
+interface Property {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  location: string;
+  // Add more property fields as needed
+}
+
+interface PropertyDetailProps {
+  property: Property;
+}
+
+const PropertyDetail: React.FC<PropertyDetailProps> = ({ property }) => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold">{property.name}</h1>
-      <div className="flex items-center space-x-2 mt-2">
-        <span className="text-yellow-500">{property.rating} stars</span>
-        <span>{property.address.city}, {property.address.country}</span>
+    <div className="max-w-4xl mx-auto p-6">
+      <h1 className="text-3xl font-bold mb-4">{property.title}</h1>
+      <div className="mb-6">
+        <p className="text-gray-600">{property.location}</p>
+        <p className="text-2xl font-semibold mt-2">${property.price}</p>
       </div>
-
-      {/* Image Grid */}
-      <div className="grid grid-cols-2 gap-4 mt-4">
-        <img src={property.image} alt={property.name} className="col-span-2 w-full h-96 object-cover rounded-lg" />
-        {/* Add more images */}
-      </div>
-
-      {/* Description */}
-      <div className="mt-4">
-        <h2 className="text-2xl font-semibold">Description</h2>
-        <p>{property.description}</p>
-      </div>
-
-      {/* Amenities */}
-      <div className="mt-4">
-        <h2 className="text-2xl font-semibold">What this place offers</h2>
-        <ul className="flex flex-wrap space-x-4">
-          {property.category.map((amenity, index) => (
-            <li key={index} className="bg-gray-200 p-2 rounded-md">
-              {amenity}
-            </li>
-          ))}
-        </ul>
+      <div className="mb-8">
+        <h2 className="text-xl font-semibold mb-2">Description</h2>
+        <p className="text-gray-700">{property.description}</p>
       </div>
     </div>
   );

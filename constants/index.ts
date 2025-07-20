@@ -37,6 +37,7 @@ export const MOCK_PROPERTIES = [
 export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
   {
     name: "Villa Ocean Breeze",
+    description: "A luxurious villa with ocean views and modern amenities.",
     address: {
       state: "Seminyak",
       city: "Bali",
@@ -55,6 +56,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
   },
   {
     name: "Mountain Escape Chalet",
+    description: "A cozy chalet nestled in the mountains, perfect for relaxation.",
     address: {
       state: "Aspen",
       city: "Colorado",
@@ -87,7 +89,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-3"
     },
     image: "/assets/image 9.png",
-    discount: ""
+    discount: "",
+    description: ''
   },
   {
     name: "City Lights Penthouse",
@@ -105,7 +108,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-4"
     },
     image: "/assets/image 12.png",
-    discount: "15"
+    discount: "15",
+    description: ''
   },
   {
     name: "Riverside Cabin",
@@ -123,7 +127,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-6"
     },
     image: "/assets/image 17.png",
-    discount: "20"
+    discount: "20",
+    description: ''
   },
   {
     name: "Modern Beachfront Villa",
@@ -141,7 +146,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "8-10"
     },
     image: "/assets/image 18.png",
-    discount: ""
+    discount: "",
+    description: ''
   },
   {
     name: "Lakeside Chalet",
@@ -159,7 +165,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-5"
     },
     image: "/assets/image 19.png",
-    discount: "10"
+    discount: "10",
+    description: ''
   },
   {
     name: "Tropical Garden Villa",
@@ -177,7 +184,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "5-6"
     },
     image: "/assets/image 21.png",
-    discount: "25"
+    discount: "25",
+    description: ''
   },
   {
     name: "Urban Loft",
@@ -195,7 +203,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-3"
     },
     image: "/assets/image 22.png",
-    discount: ""
+    discount: "",
+    description: ''
   },
   {
     name: "Secluded Forest Cabin",
@@ -213,7 +222,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "5-7"
     },
     image: "/assets/image 24.png",
-    discount: "40"
+    discount: "40",
+    description: ""
   },
   {
     name: "Cliffside Villa",
@@ -231,7 +241,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "6-8"
     },
     image: "/assets/image 22.png",
-    discount: "50"
+    discount: "50",
+    description: ''
   },
   {
     name: "Coastal Escape Villa",
@@ -249,7 +260,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "4-6"
     },
     image: "/assets/image 19.png",
-    discount: ""
+    discount: "",
+    description: ''
   },
   {
     name: "Historical Villa",
@@ -267,7 +279,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2-4"
     },
     image: "/assets/VillaI.png",
-    discount: "35"
+    discount: "35",
+    description: ''
   },
   {
     name: "Downtown Apartment",
@@ -285,7 +298,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "2"
     },
     image: "/assets/DesignerVilla.png",
-    discount: "20"
+    discount: "20",
+    description: ''
   },
   {
     name: "Luxury Safari Lodge",
@@ -303,96 +317,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
       occupants: "6-8"
     },
     image: "/assets/CasaDeCalorina.png",
-    discount: "20"
+    discount: "20",
+    description: ''
   },
-  {
-    name: "Countryside Cottage",
-    address: {
-      state: "Cotswolds",
-      city: "Gloucestershire",
-      country: "UK"
-    },
-    rating: 4.58,
-    category: ["Countryside", "Fireplace", "Self Checkin"],
-    price: 1800,
-    offers: {
-      bed: "2",
-      shower: "1",
-      occupants: "2-4"
-    },
-    image: "/assets/image1.png",
-    discount: "25"
-  },
-  {
-    name: "Riverfront Mansion",
-    address: {
-      state: "Paris",
-      city: "Île-de-France",
-      country: "France"
-    },
-    rating: 4.86,
-    category: ["Riverfront", "Private Garden", "Self Checkin"],
-    price: 5000,
-    offers: {
-      bed: "4",
-      shower: "3",
-      occupants: "6-8"
-    },
-    image: "/assets/List 1.png",
-    discount: "30"
-  },
-  {
-    name: "Ski Chalet",
-    address: {
-      state: "Zermatt",
-      city: "Valais",
-      country: "Switzerland"
-    },
-    rating: 4.75,
-    category: ["Mountain View", "Ski Access", "Fireplace"],
-    price: 3900,
-    offers: {
-      bed: "3",
-      shower: "3",
-      occupants: "4-5"
-    },
-    image: "/assets/List 4.png",
-    discount: ""
-  },
-  {
-    name: "Island Paradise Villa",
-    address: {
-      state: "Mahe",
-      city: "Victoria",
-      country: "Seychelles"
-    },
-    rating: 4.98,
-    category: ["Beachfront", "Private Pool", "Chef Service"],
-    price: 6500,
-    offers: {
-      bed: "5",
-      shower: "5",
-      occupants: "8-10"
-    },
-    image: "/assets/List 9.png",
-    discount: "60"
-  },
-  {
-    name: "Clifftop Retreat",
-    address: {
-      state: "Cape Town",
-      city: "Western Cape",
-      country: "South Africa"
-    },
-    rating: 4.78,
-    category: ["Ocean View", "Private Pool", "Self Checkin"],
-    price: 4100,
-    offers: {
-      bed: "3",
-      shower: "3",
-      occupants: "4-5"
-    },
-    image: "/assets/List 10.png",
-    discount: ""
-  }
+  
 ];
