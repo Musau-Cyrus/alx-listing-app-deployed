@@ -3,11 +3,12 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import PropertyDetail from "@/components/property/PropertyDetail";
 import { API_BASE_URL } from "@/constants";
+import { Property } from "@/interfaces";
 
 export default function PropertyDetailPage() {
   const router = useRouter();
   const { id } = router.query;
-  const [property, setProperty] = useState<any>(null);
+  const [property, setProperty] = useState<Property | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,7 +16,7 @@ export default function PropertyDetailPage() {
       if (!id) return;
       try {
         const response = await axios.get(`${API_BASE_URL}/properties/${id}`);
-        setProperty(response.data);
+        setProperty(response.data as Property);
       } catch (error) {
         console.error("Error fetching property details:", error);
       } finally {

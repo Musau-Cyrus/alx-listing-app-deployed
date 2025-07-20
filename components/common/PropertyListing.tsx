@@ -1,13 +1,16 @@
 import { PROPERTYLISTINGSAMPLE } from "@/constants/index";
 import { PropertyProps } from "@/interfaces";
+import Image from "next/image";
 
 const PropertyCard: React.FC<{ property: PropertyProps }> = ({ property }) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <div className="relative">
-        <img
+        <Image
           src={property.image}
           alt={property.name}
+          width={300}
+          height={192}
           className="w-full h-48 object-cover"
         />
         {property.discount && (

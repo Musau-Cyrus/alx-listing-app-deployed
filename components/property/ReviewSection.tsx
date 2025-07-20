@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { API_BASE_URL } from "@/constants";
@@ -117,9 +118,11 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ propertyId }) => {
             <div className="flex items-start">
               <div className="flex-shrink-0">
                 {review.userAvatar ? (
-                  <img
+                  <Image
                     src={review.userAvatar}
                     alt={review.userName}
+                    width={40}
+                    height={40}
                     className="h-10 w-10 rounded-full"
                   />
                 ) : (

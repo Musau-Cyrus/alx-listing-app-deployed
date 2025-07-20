@@ -18,6 +18,16 @@ export interface ButtonProps {
   type?: 'button' | 'submit';
 }
 
+// Property interface for property detail page
+export interface Property {
+  id: string;
+  title: string;
+  description: string;
+  price: number;
+  location: string;
+  // Add more property fields as needed
+}
+
 export interface PropertyProps {
   name: string;
   description: string;

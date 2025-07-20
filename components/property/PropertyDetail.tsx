@@ -1,13 +1,5 @@
 import React from 'react';
-
-interface Property {
-  id: string;
-  title: string;
-  description: string;
-  price: number;
-  location: string;
-  // Add more property fields as needed
-}
+import { Property } from '@/interfaces';
 
 interface PropertyDetailProps {
   property: Property;

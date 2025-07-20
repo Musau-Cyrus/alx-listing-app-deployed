@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -97,9 +98,11 @@ const Header: React.FC = () => {
           </button>
         </nav>
         <div>
-          <img
+          <Image
             src="/assets/images/profile.png"
             alt="User Profile Icon"
+            width={46}
+            height={46}
             className="size-[46px]"
           />
         </div>
@@ -204,9 +207,11 @@ const Header: React.FC = () => {
 
         {/* USER PROFILE ICON MEDIUM SCREENS */}
         <div className="hidden md:block lg:hidden shrink-0">
-          <img
+          <Image
             src="/assets/images/profile.png"
             alt="User Profile Icon"
+            width={46}
+            height={46}
             className="size-[46px]"
           />
         </div>
